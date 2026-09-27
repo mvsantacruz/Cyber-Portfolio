@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maria V. Santacruz — SOC Analyst Portfolio</title>
+
+<style>
+  :root{
+    --bg:#0a0e0c;
+    --panel:#0f1512;
+    --text:#c9d1cb;
+    --dim:#5f6b64;
+    --accent:#3ddc84;
+    --amber:#e0a84c;
+    --rule:#1c2521;
+    font-size:16px;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    margin:0;
+    padding:0;
+    background:var(--bg);
+    color:var(--text);
+  }
+
+  body{
+    font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+    line-height:1.7;
+    padding-bottom:4rem;
+  }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:3rem 1.5rem 0;
+  }
+
+  .prompt{color:var(--accent);}
+  .path{color:var(--amber);}
+
+  header{
+    margin-bottom:3rem;
+    display:flex;
+    gap:1.5rem;
+    align-items:flex-start;
+  }
+
+  header .line{color:var(--dim);}
+
+  .avatar{
+    width:90px;
+    height:90px;
+    flex-shrink:0;
+    border:1px solid var(--rule);
+    background:var(--panel) center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--dim);
+    font-size:.7rem;
+    text-align:center;
+    border-radius:4px;
+  }
+
+  .head-text{flex:1;min-width:0;}
+
+  h1{
+    font-size:1.75rem;
+    margin:.4rem 0 .3rem;
+    font-weight:600;
+    letter-spacing:.3px;
+  }
+
+  .role{
+    color:var(--accent);
+    font-size:1rem;
+    margin-bottom:1rem;
+  }
+
+  .contact{
+    color:var(--dim);
+    font-size:.9rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.8rem;
+  }
+
+  .contact a{
+    color:var(--dim);
+    text-decoration:none;
+    border-bottom:1px dotted var(--rule);
+  }
+
+  .contact a:hover{
+    color:var(--accent);
+    border-color:var(--accent);
+  }
+
+  section{margin-top:3rem;}
+
+  .cmd{
+    color:var(--dim);
+    font-size:.9rem;
+    margin-bottom:1rem;
+  }
+
+  p.summary{
+    margin:0;
+    color:var(--text);
+    max-width:65ch;
+    font-size:.95rem;
+  }
+
+  ul.plain{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
+  .skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+  }
+
+  .skills li{
+    border:1px solid var(--rule);
+    padding:.35rem .75rem;
+    font-size:.85rem;
+    background:var(--panel);
+    border-radius:4px;
+  }
+
+  .entry{
+    border-left:2px solid var(--rule);
+    padding:.2rem 0 1.2rem 1rem;
+    margin-bottom:.4rem;
+  }
+
+  .entry .title{
+    font-weight:600;
+    font-size:1rem;
+    margin-bottom:.2rem;
+  }
+
+  .entry .meta{
+    color:var(--dim);
+    font-size:.82rem;
+    margin-bottom:.5rem;
+  }
+
+  .entry p{
+    margin:0;
+    font-size:.9rem;
+    max-width:65ch;
+  }
+
+  .proj{
+    background:var(--panel);
+    border:1px solid var(--rule);
+    padding:1.1rem 1.2rem;
+    margin-bottom:1rem;
+    border-radius:4px;
+  }
+
+  .proj .title{
+    color:var(--accent);
+    font-weight:600;
+    font-size:1rem;
+  }
+
+  .proj .stack{
+    color:var(--dim);
+    font-size:.8rem;
+    margin:.3rem 0 .6rem;
+  }
+
+  .proj p{
+    margin:0;
+    font-size:.9rem;
+    color:var(--text);
+  }
+
+  .proj a{
+    color:var(--amber);
+    font-size:.82rem;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:.6rem;
+  }
+
+  .proj a:hover{text-decoration:underline;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+  }
+
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr;}
+  }
+
+  footer{
+    margin-top:3.5rem;
+    padding-top:1.3rem;
+    border-top:1px solid var(--rule);
+    color:var(--dim);
+    font-size:.8rem;
+  }
+
+  .cursor{
+    display:inline-block;
+    width:.55em;
+    height:1em;
+    background:var(--accent);
+    margin-left:.15em;
+    vertical-align:-2px;
+    animation:blink 1.1s steps(1) infinite;
+  }
+
+  @keyframes blink{50%{opacity:0;}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="avatar" style="background-image:url('headshot.jpg')">photo</div>
+
+    <div class="head-text">
+      <div class="line"><span class="prompt">$</span> whoami</div>
+
+      <h1>Maria V. Santacruz</h1>
+      <div class="role">Aspiring SOC Analyst — Detection &amp; Log Analysis</div>
+
+      <div class="contact">
+        <span>mvsantacruz.cyber@gmail.com</span>
+        <span><a href="https://github.com/mvsantacruz">github.com/mvsantacruz</a></span>
+        <span><a href="https://linkedin.com/in/mvsantacruz">linkedin.com/in/mvsantacruz</a></span>
+        <span>Chicago, IL</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat about.txt</div>
+    <p class="summary">
+      I am a dedicated career‑changer transitioning into Cybersecurity after nine years of successfully running my own business in the beauty industry. I recently completed Merit America’s Cybersecurity program — a five‑month intensive that included professional development training, the Google Cybersecurity Professional Certificate, and multiple hands‑on technical projects. This experience strengthened my technical foundation and reinforced my commitment to building a long‑term career in cybersecurity. I’m especially drawn to SOC work because I enjoy analyzing logs, investigating anomalies, and understanding adversary behavior.
+    </p>
+  </section>
+
+  <!-- SUMMARY -->
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat summary.txt</div>
+    <p class="summary">
+      I’m targeting SOC Analyst and Cyber Defense roles where I can investigate alerts, analyze logs, and contribute to detection engineering. I bring strong analytical skills, hands‑on SOC labs, and a calm, methodical approach to incident response.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="cmd"><span class="prompt">$</span> ls skills/</div>
+
+    <ul class="skills plain">
+      <li>Python</li>
+      <li>SQL (BigQuery, MySQL)</li>
+      <li>Linux</li>
+      <li>Windows</li>
+      <li>Splunk</li>
+      <li>SIEM</li>
+      <li>Log Analysis</li>
+      <li>Wireshark</li>
+      <li>Suricata</li>
+      <li>Nmap</li>
+      <li>Network Security</li>
+      <li>Incident Response</li>
+      <li>NIST Frameworks</li>
+      <li>Threat Analysis</li>
+      <li>Attention to Detail</li>
+      <li>Calm Under Pressure</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <div class="cmd"><span class="prompt">$</span> ./projects.sh --list</div>
+
+    <div class="grid">
+
+      <div class="proj">
+        <div class="title">Security Audit</div>
+        <div class="stack">Linux · Windows · NIST Controls</div>
+        <p>Performed a structured security audit evaluating system configurations, access controls, and potential vulnerabilities. Documented findings and recommended remediation steps aligned with NIST best practices.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+      <div class="proj">
+        <div class="title">Incident Report</div>
+        <div class="stack">SIEM · Log Analysis · IR Documentation</div>
+        <p>Analyzed simulated malicious activity, investigated log artifacts, and produced a formal incident report detailing timeline, impact, and recommended response actions.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+      <div class="proj">
+        <div class="title">SQL Query (Coming Soon)</div>
+        <div class="stack">BigQuery · MySQL</div>
+        <p>Developing SQL queries to analyze security‑relevant datasets, detect anomalies, and support threat‑hunting workflows.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+      <div class="proj">
+        <div class="title">Vulnerability Assessment (Coming Soon)</div>
+        <div class="stack">Nmap · Suricata · Linux</div>
+        <p>Performing host and network‑level vulnerability assessments, documenting findings, and mapping risks to security controls.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+      <div class="proj">
+        <div class="title">TryHackMe Journal (Coming Soon)</div>
+        <div class="stack">SOC Labs · Attack Simulation</div>
+        <p>Documenting hands‑on SOC labs, attack simulations, and defensive techniques learned through TryHackMe’s SOC Analyst path.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+      <div class="proj">
+        <div class="title">Incident Handler’s Journal (Coming Soon)</div>
+        <div class="stack">Incident Response · Log Analysis</div>
+        <p>A collection of incident response exercises, log investigations, and case studies demonstrating structured IR methodology.</p>
+        <a href="#">view write-up →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat experience.log</div>
+
+    <div class="entry">
+      <div class="title">Business Owner — Self‑Employed</div>
+      <div class="meta">2015 – 2024</div>
+      <p>Managed daily operations, financial records, and sensitive client information with strong attention to detail. Developed problem‑solving skills, crisis management, and process optimization — all directly applicable to incident response and SOC triage.</p>
+    </div>
+
+    <div class="entry">
+      <div class="title">Cybersecurity Analyst Training — Merit America</div>
+      <div class="meta">2024 – 2025</div>
+      <p>Completed a five‑month intensive cybersecurity program including the Google Cybersecurity Professional Certificate, hands‑on technical labs, SIEM investigations, Linux fundamentals, Windows event log analysis, and network security.</p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="path">~</span> <span class="prompt">$</span><span class="cursor"></span>
+  </footer>
+
+</div>
+</body>
+</html>
