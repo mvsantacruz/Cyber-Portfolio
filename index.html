@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maria V. Santacruz — SOC Analyst Portfolio</title>
+<style>
+  :root{
+    --bg:#0a0e0c;
+    --panel:#0f1512;
+    --text:#c9d1cb;
+    --dim:#5f6b64;
+    --accent:#3ddc84;
+    --amber:#e0a84c;
+    --rule:#1c2521;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);}
+  body{
+    font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+    line-height:1.6;
+    padding:0 0 4rem;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 0;}
+  .prompt{color:var(--accent);}
+  .path{color:var(--amber);}
+  header{margin-bottom:2.5rem;display:flex;gap:1.3rem;align-items:flex-start;}
+  header .line{color:var(--dim);}
+  .avatar{
+    width:84px;height:84px;
+    flex-shrink:0;
+    border:1px solid var(--rule);
+    background:var(--panel) center/cover no-repeat;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--dim);font-size:.7rem;text-align:center;
+  }
+  .head-text{flex:1;min-width:0;}
+  h1{
+    font-size:1.6rem;
+    margin:.4rem 0 .2rem;
+    color:var(--text);
+    font-weight:600;
+    letter-spacing:.2px;
+  }
+  .role{color:var(--accent);font-size:.95rem;margin-bottom:1rem;}
+  .contact{color:var(--dim);font-size:.85rem;}
+  .contact a{color:var(--dim);text-decoration:none;border-bottom:1px dotted var(--rule);}
+  .contact a:hover{color:var(--accent);border-color:var(--accent);}
+  .contact span{margin-right:1rem;}
+
+  section{margin-top:2.5rem;}
+  .cmd{
+    color:var(--dim);
+    font-size:.85rem;
+    margin-bottom:.9rem;
+  }
+  .cmd .prompt{margin-right:.4rem;}
+
+  p.summary{margin:0;color:var(--text);max-width:62ch;}
+
+  ul.plain{list-style:none;margin:0;padding:0;}
+
+  .skills{display:flex;flex-wrap:wrap;gap:.5rem;}
+  .skills li{
+    border:1px solid var(--rule);
+    padding:.3rem .7rem;
+    font-size:.82rem;
+    color:var(--text);
+    background:var(--panel);
+  }
+
+  .entry{
+    border-left:2px solid var(--rule);
+    padding:.1rem 0 1.1rem 1rem;
+    margin-bottom:.2rem;
+  }
+  .entry:last-child{margin-bottom:0;}
+  .entry .title{color:var(--text);font-weight:600;font-size:.95rem;}
+  .entry .meta{color:var(--dim);font-size:.8rem;margin:.15rem 0 .5rem;}
+  .entry p{margin:0;color:var(--text);font-size:.88rem;max-width:60ch;}
+
+  .proj{
+    background:var(--panel);
+    border:1px solid var(--rule);
+    padding:1rem 1.1rem;
+    margin-bottom:.9rem;
+  }
+  .proj .title{color:var(--accent);font-weight:600;font-size:.92rem;}
+  .proj .stack{color:var(--dim);font-size:.78rem;margin:.25rem 0 .5rem;}
+  .proj p{margin:0;font-size:.88rem;color:var(--text);}
+  .proj a{color:var(--amber);font-size:.8rem;text-decoration:none;display:inline-block;margin-top:.5rem;}
+  .proj a:hover{text-decoration:underline;}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+  @media (max-width:560px){.grid{grid-template-columns:1fr;}}
+
+  footer{
+    margin-top:3rem;
+    padding-top:1.2rem;
+    border-top:1px solid var(--rule);
+    color:var(--dim);
+    font-size:.78rem;
+  }
+
+  .cursor{
+    display:inline-block;
+    width:.55em;height:1em;
+    background:var(--accent);
+    margin-left:.15em;
+    vertical-align:-2px;
+    animation:blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
+
+  @media (max-width:480px){
+    .wrap{padding-top:2rem;}
+    .skills li{font-size:.78rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="avatar" style="background-image:url('headshot.jpg')">photo</div>
+    <div class="head-text">
+      <div class="line"><span class="prompt">$</span> whoami</div>
+      <h1>Maria V. Santacruz</h1>
+      <div class="role">Aspiring SOC Analyst — Detection &amp; Log Analysis</div>
+      <div class="contact">
+        <span>[email protected]</span>
+        <span><a href="#">github.com/yourusername</a></span>
+        <span><a href="#">linkedin.com/in/yourusername</a></span>
+        <span>Chicago, IL</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat about.txt</div>
+    <p class="summary">
+      Placeholder: a few sentences about who you are, your 10+ years of prior
+      professional experience, and why you're moving into cybersecurity.
+      Mention what drew you to SOC work specifically.
+    </p>
+  </section>
+
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat summary.txt</div>
+    <p class="summary">
+      Placeholder: one or two sentences on the kind of SOC/analyst role
+      you're targeting and what you bring to it.
+    </p>
+  </section>
+
+  <section>
+    <div class="cmd"><span class="prompt">$</span> ls skills/</div>
+    <ul class="skills plain">
+      <li>Splunk</li>
+      <li>SIEM</li>
+      <li>Log Analysis</li>
+      <li>Windows Event Logs</li>
+      <li>Network Fundamentals</li>
+      <li>Incident Response</li>
+      <li>Add / remove as needed</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cmd"><span class="prompt">$</span> ./projects.sh --list</div>
+
+    <div class="grid">
+      <div class="proj">
+        <div class="title">Lab 1 — Brute-Force Detection</div>
+        <div class="stack">Splunk · Windows Event ID 4625</div>
+        <p>Placeholder: describe the detection logic and outcome.</p>
+        <a href="#">view write-up →</a>
+      </div>
+      <div class="proj">
+        <div class="title">Lab 2 — C2 Beaconing Detection</div>
+        <div class="stack">Splunk · streamstats · Proxy Logs</div>
+        <p>Placeholder: describe the approach and what it demonstrates.</p>
+        <a href="#">view write-up →</a>
+      </div>
+      <div class="proj">
+        <div class="title">Project 3</div>
+        <div class="stack">Tools used</div>
+        <p>Placeholder description.</p>
+        <a href="#">view write-up →</a>
+      </div>
+      <div class="proj">
+        <div class="title">Project 4</div>
+        <div class="stack">Tools used</div>
+        <p>Placeholder description.</p>
+        <a href="#">view write-up →</a>
+      </div>
+      <div class="proj">
+        <div class="title">Project 5</div>
+        <div class="stack">Tools used</div>
+        <p>Placeholder description.</p>
+        <a href="#">view write-up →</a>
+      </div>
+      <div class="proj">
+        <div class="title">Project 6</div>
+        <div class="stack">Tools used</div>
+        <p>Placeholder description.</p>
+        <a href="#">view write-up →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cmd"><span class="prompt">$</span> cat experience.log</div>
+
+    <div class="entry">
+      <div class="title">Job Title — Company Name</div>
+      <div class="meta">Month Year – Month Year</div>
+      <p>Placeholder: one or two lines on relevant responsibilities or
+      transferable skills from prior career.</p>
+    </div>
+
+    <div class="entry">
+      <div class="title">Job Title — Company Name</div>
+      <div class="meta">Month Year – Month Year</div>
+      <p>Placeholder: another role, or an education / certification entry.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="path">~</span> <span class="prompt">$</span><span class="cursor"></span>
+  </footer>
+
+</div>
+</body>
+</html>
